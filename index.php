@@ -14,7 +14,7 @@ else{
 	
 	if (preg_match('/^[a-z0-9_\-]+$/i', $page)){
 				
-		if (!in_array($page, $forbidden_pages_array)) {
+		if (!in_array($page, $forbidden_pages_array) && file_exists($dirPages.$page.$pageExtension)) {
 
 			include_once $dirPages.$page.$pageExtension;
 		}
