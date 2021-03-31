@@ -9,35 +9,37 @@ $homePage =$PagePDO->getPage('Home Page');
 ?>
 <!DOCTYPE html>
 <html lang="en">
-    <head>
+<head>
 
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
-        <meta http-equiv="X-UA-Compatible" content="ie=edge">
-        <title>PHP Query Crew - Health Clinic</title>
-        
-        <!-- Bootstrap 4.5 CSS -->
-        <link rel="stylesheet" href="library/bootstrap/bootstrap.min.css">
-        <!-- Style CSS -->
-        <link rel="stylesheet" href="css/style.css">
-        <!-- Style FOR HEADER AND FOOTER -->
-        <link rel="stylesheet" href="css/HeaderFooter.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>PHP Query Crew - Health Clinic</title>
+
+    <!-- Bootstrap 4.5 CSS -->
+    <link rel="stylesheet" href="library/bootstrap/bootstrap.min.css">
+    <!-- Style CSS -->
+    <link rel="stylesheet" href="css/style.css">
+    <!-- Style FOR HEADER AND FOOTER -->
+    <link rel="stylesheet" href="css/HeaderFooter.css">
 
 
-    </head>
+</head>
 
-    <body>
-        <?php
 
-            include_once 'header.php';
-        echo $homePage->content;
-        ?>
+
+<body>
+<?php
+
+include_once 'header.php';
+ echo $homePage->content;
+?>
 
 <?php
 include_once 'footer.php';
 ?>
 
-        <!-- Script Source Files -->
+<!-- Script Source Files -->
 
 <!-- jQuery -->
 <script src="js/jquery-3.5.1.min.js"></script>
@@ -50,6 +52,6 @@ include_once 'footer.php';
 
 <!-- End Script Source Files -->
 
-        
-    </body>
+
+</body>
 </html>
