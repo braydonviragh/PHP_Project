@@ -14,7 +14,7 @@ else{
 	
 	if (preg_match('/^[a-z0-9_\-]+$/i', $page)){
 				
-		if (!in_array($page, $forbidden_pages_array) && file_exists($dirPages.$page.$pageExtension)) {
+		if (!in_array($page, $forbidden_pages_array)) {
 
 			include_once $dirPages.$page.$pageExtension;
 		}
@@ -28,7 +28,7 @@ else{
 			echo "Page not found";
 		}
 }
-
+// franck comment. Jalal comment.
 ?>
 			
 

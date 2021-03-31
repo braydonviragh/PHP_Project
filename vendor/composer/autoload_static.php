@@ -18,7 +18,9 @@ class ComposerStaticInit94ab6673d89eff9701fe1d38ac009c83
     public static $prefixLengthsPsr4 = array (
         'W' => 
         array (
-            'WebApp2\\managers\\' => 17,
+            'WebApp2\\ObjectManagers\\' => 23,
+            'WebApp2\\Database\\' => 17,
+            'WebApp2\\Classes\\' => 16,
         ),
         'S' => 
         array (
@@ -39,9 +41,17 @@ class ComposerStaticInit94ab6673d89eff9701fe1d38ac009c83
     );
 
     public static $prefixDirsPsr4 = array (
-        'WebApp2\\managers\\' => 
+        'WebApp2\\ObjectManagers\\' => 
         array (
-            0 => __DIR__ . '/../..' . '/managers',
+            0 => __DIR__ . '/../..' . '/objectManagers',
+        ),
+        'WebApp2\\Database\\' => 
+        array (
+            0 => __DIR__ . '/../..' . '/database',
+        ),
+        'WebApp2\\Classes\\' => 
+        array (
+            0 => __DIR__ . '/../..' . '/classes',
         ),
         'Symfony\\Polyfill\\Php72\\' => 
         array (

@@ -6,7 +6,9 @@ $vendorDir = dirname(dirname(__FILE__));
 $baseDir = dirname($vendorDir);
 
 return array(
-    'WebApp2\\managers\\' => array($baseDir . '/managers'),
+    'WebApp2\\ObjectManagers\\' => array($baseDir . '/objectManagers'),
+    'WebApp2\\Database\\' => array($baseDir . '/database'),
+    'WebApp2\\Classes\\' => array($baseDir . '/classes'),
     'Symfony\\Polyfill\\Php72\\' => array($vendorDir . '/symfony/polyfill-php72'),
     'Symfony\\Polyfill\\Mbstring\\' => array($vendorDir . '/symfony/polyfill-mbstring'),
     'Symfony\\Polyfill\\Intl\\Normalizer\\' => array($vendorDir . '/symfony/polyfill-intl-normalizer'),
