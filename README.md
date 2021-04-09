@@ -22,6 +22,8 @@ Tier 2
 
 5)  Add, Delete, Update User Appointments (Tier 2) - Braydon 
 
+6) Admin will see the appointments in the today and weekly calendar, admin can reply inquiries. (Tier 2) - Ikumi 
+
 Tier 3
 
 1) Patient can leave a review and rating for a doctor that they saw (need to create a ‘rating’ database table) (Tier 3). – Jalal.
