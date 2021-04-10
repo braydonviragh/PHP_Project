@@ -4,7 +4,7 @@
 
 namespace Composer\Autoload;
 
-class ComposerStaticInit94ab6673d89eff9701fe1d38ac009c83
+class ComposerStaticInit96fb858ef8de228f02b3d739aae573c0
 {
     public static $files = array (
         'e69f7f6ee287b969198c3c9d6777bd38' => __DIR__ . '/..' . '/symfony/polyfill-intl-normalizer/bootstrap.php',
@@ -29,6 +29,10 @@ class ComposerStaticInit94ab6673d89eff9701fe1d38ac009c83
             'Symfony\\Polyfill\\Intl\\Normalizer\\' => 33,
             'Symfony\\Polyfill\\Intl\\Idn\\' => 26,
             'Symfony\\Polyfill\\Iconv\\' => 23,
+        ),
+        'P' => 
+        array (
+            'PHPMailer\\PHPMailer\\' => 20,
         ),
         'E' => 
         array (
@@ -73,6 +77,10 @@ class ComposerStaticInit94ab6673d89eff9701fe1d38ac009c83
         array (
             0 => __DIR__ . '/..' . '/symfony/polyfill-iconv',
         ),
+        'PHPMailer\\PHPMailer\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/phpmailer/phpmailer/src',
+        ),
         'Egulias\\EmailValidator\\' => 
         array (
             0 => __DIR__ . '/..' . '/egulias/email-validator/src',
@@ -90,9 +98,9 @@ class ComposerStaticInit94ab6673d89eff9701fe1d38ac009c83
     public static function getInitializer(ClassLoader $loader)
     {
         return \Closure::bind(function () use ($loader) {
-            $loader->prefixLengthsPsr4 = ComposerStaticInit94ab6673d89eff9701fe1d38ac009c83::$prefixLengthsPsr4;
-            $loader->prefixDirsPsr4 = ComposerStaticInit94ab6673d89eff9701fe1d38ac009c83::$prefixDirsPsr4;
-            $loader->classMap = ComposerStaticInit94ab6673d89eff9701fe1d38ac009c83::$classMap;
+            $loader->prefixLengthsPsr4 = ComposerStaticInit96fb858ef8de228f02b3d739aae573c0::$prefixLengthsPsr4;
+            $loader->prefixDirsPsr4 = ComposerStaticInit96fb858ef8de228f02b3d739aae573c0::$prefixDirsPsr4;
+            $loader->classMap = ComposerStaticInit96fb858ef8de228f02b3d739aae573c0::$classMap;
 
         }, null, ClassLoader::class);
     }
