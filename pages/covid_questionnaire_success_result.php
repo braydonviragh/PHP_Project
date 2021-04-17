@@ -6,6 +6,9 @@
 
 	$covidPDO = new CovidResultPDO();
 	$covidResult =$covidPDO->getCovidResult('success');
+	$userfullname = "Patient";
+	if(isset($_SESSION['user']))
+		$userfullname = $_SESSION['user']->firstname . " ". $_SESSION['user']->lastname;
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -16,7 +19,7 @@
 		<meta name="covid-19 questionnaire" description=" coronavirus self-assessment">
 	    <meta http-equiv="X-UA-Compatible" content="ie=edge">
 		<title>QC/HC - covid questionaire</title>
-		
+
 		<!-- Bootstrap 4.5 CSS -->
 		<link rel="stylesheet" href="library/bootstrap/bootstrap.min.css">
 		<!-- Style CSS -->
@@ -26,7 +29,7 @@
 	    <!-- Style FOR HEADER AND FOOTER -->
 	    <link rel="stylesheet" href="css/HeaderFooter.css">
 	    <script src="https://kit.fontawesome.com/c03ea9a48c.js" crossorigin="anonymous"></script>
-	    
+
 
 
 	</head>
@@ -36,36 +39,36 @@
 
 			include_once 'header.php';
         ?>
-      
+
         <main class="content-wrapper container">
 
         	<h1>COVID-19 self-assessment result</h1>
            <p class="result-datetime">
            	<?php
-           	date_default_timezone_set("America/New_York");
+           	date_default_timezone_set("America/Toronto");
            	echo date("Y-m-d h:i a");
            	?>
            </p>
         	<div class="success-result-wrapper">
         		<p>
         			<strong>
-        			Dear fullname,
+        			Dear <?= $userfullname ?>,
         			</strong>
         		</p>
-        		<?php	
+        		<?php
 		        	echo $covidResult->details;
-				
+
 			    ?>
         	</div>
 
         	<div class="choices-wrapper">
 
-        		
-        		<a href="index.php?page=home" class="btn btn-secondary btn-lg">Quit</a>
-        		
-        	</div>   
+
+        		<a href="index.php?page=bookAppointment" class="btn btn-secondary btn-lg">Go back to book an appointment</a>
+
+        	</div>
          </main>
-		    <?php	
+		    <?php
 				include_once 'footer.php';
 			?>
 		    <!-- Script Source Files -->
@@ -82,7 +85,7 @@
 			<!-- End Script Source Files -->
 
 
-	  
-		
+
+
 	</body>
 </html>

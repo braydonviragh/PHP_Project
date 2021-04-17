@@ -12,7 +12,7 @@ class PatientPDO
 
     public function addPatient($firstname, $lastname, $username, $password, $email, $user_role_id)
     {
-        $sql = "INSERT INTO users (firstname, lastname, username, password, email, user_role_id) 
+        $sql = "INSERT INTO users (firstname, lastname, username, password, email, user_role_id)
               VALUES (:firstname, :lastname, :username, :password, :email, :user_role_id) ";
         $pst = $this->dbcon->prepare($sql);
 
@@ -55,13 +55,47 @@ class PatientPDO
         $pst->bindParam(':username', $username);
         if ($pst->execute()) {
             $results = $pst->fetch(\PDO::FETCH_OBJ);
-            if (password_verify($password, $results[0]->password)) {
+//            var_dump($results);
+            if (password_verify($password, $results->password)) {
 
                 return true;
 
             }
         }
         return false;
+    }
+
+
+    // select patients who have appointments on the current date
+    public function getPatientsOfTheDay(){
+
+      $sql ="SELECT users.firstname as firstname, users.lastname as lastname, users.email as email FROM users
+             INNER JOIN appointments ON users.id = appointments.patient_id
+             INNER JOIN days ON appointments.day_id = days.id
+             WHERE days.date = CURRENT_DATE";
+      $pdostm = $db->prepare($query);
+      $pdostm->execute();
+      $results = $pdostm->fetchAll(\PDO::FETCH_OBJ);
+      return $results;
+    }
+    
+    public function findUser($username, $password)
+    {
+        $sql = "SELECT * from users where username = :username";
+        $pst = $this->dbcon->prepare($sql);
+
+        $pst->bindParam(':username', $username);
+        if ($pst->execute()) {
+            $results = $pst->fetch(\PDO::FETCH_OBJ);
+//            var_dump($results);
+            if (password_verify($password, $results->password)) {
+
+                return $results;
+
+            }
+        }
+        return null;
+
     }
 
 }
