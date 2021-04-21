@@ -16,11 +16,11 @@
 
 .errormsg{
   color: red;
-  
+
 }
 .form-signin {
     /*width: 100%;*/
-    width: 25%;
+
     /*max-width: 330px;*/
     padding: 30px;
     margin: auto;
@@ -35,16 +35,30 @@
     text-align: left;
     z-index: 2;
 }
+form{
+  max-width: 21em;
+  margin: auto;
+  padding: 0.6em;
+}
 
-.form-signin input[type="email"] {
+.form-signin input[type="text"] {
     margin-bottom: -1px;
     border-bottom-right-radius: 0;
     border-bottom-left-radius: 0;
     text-align: left;
+    width: 20em;
+
+}
+
+.form-signin input[type="submit"] {
+
+    width: 10em;
+
 }
 
 .form-signin input[type="password"] {
     margin-bottom: 30px;
     border-top-left-radius: 0;
     border-top-right-radius: 0;
+    width: 20em;
 }
