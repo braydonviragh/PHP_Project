@@ -32,7 +32,12 @@ Class MailManager{
     $content = $this->generate_invitation($user->firstname ." ". $user->lastname);
     $message ->setBody($content);
     //echo $content;
-    $result = $this->mailer->send($message);
+    if($this->mailer->send($message)){
+			return "invitation sent !";
+		}
+		else{
+			return "failed !";
+		}
 
 	}
  // this function sends an email to the support staff
@@ -135,7 +140,7 @@ Class MailManager{
 					<header>
 			     		<!--Navbar -->
 			     		<nav class='navbar navbar-expand-lg navbar-dark cyan'>
-			         		<a id='logo' href='http://localhost:8888/Web-App-2/index.php?page=home'>QC/HC</a>
+			         		<a id='logo' href='https://localhost/project-phase-2-and-3-querycrew0/index.php?page=indexDoctor' id='link-inv'>QC/HC</a>
 
 
 			        	</nav>
@@ -148,7 +153,7 @@ Class MailManager{
 						<p>
 							Thank you for your recent visit in our hospital. We hope that care provided to you was the one you were looking for. If so, will you consider posting an online review? This helps us to continue providing great quality of services and helps potential patient to make confident decisions. Please, click on the link below share your last experience in our Hospital:
 						<div class='invitation-review'>
-							<a href='http://localhost:8888/Web-App-2/index.php?' id='link-inv'>Share with us your last experience in our hospital.</a>
+							<a href='https://localhost/Web-App-2/index.php?page=indexDoctor'>Share with us your last experience in our hospital.</a>
 						</div>
 						</p>
 
