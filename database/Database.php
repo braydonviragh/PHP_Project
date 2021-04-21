@@ -4,9 +4,9 @@ namespace WebApp2\Database;
 
 class Database {
 
-    private static $user = "root";
-    private static $pass = "";
-    private static $dsn ="mysql:host=localhost;dbname=qc_health_clinic";
+    private static $user = "bf4b699baa82de";
+    private static $pass = "765faf1c";
+    private static $dsn ="mysql:host=us-cdbr-east-03.cleardb.com;dbname=heroku_f321750b7faf5a5";
     private static $dbcon;
 
     private function __construct() {
