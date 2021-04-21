@@ -54,6 +54,12 @@ li >li {
     display: block;
 }
 
+@media only screen and (max-width: 1130px) {
+  nav{
+    font-size: 0.8em;
+  }
+}
+
 /*============= FOOTER =============*/
 footer {
     background: #383838;
@@ -85,4 +91,3 @@ footer .svg-inline--fa {
 footer .svg-inline--fa:hover {
     color: aqua;
 }
-
