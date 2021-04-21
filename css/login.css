@@ -9,10 +9,7 @@
 /*    background-color: #f5f5f5;*/
 /*    text-align: left;*/
 /*}*/
-.login{
-    width: 30px; !important;
 
-}
 
 .errormsg{
   color: red;
@@ -35,8 +32,8 @@
     text-align: left;
     z-index: 2;
 }
-form{
-  max-width: 21em;
+form.container{
+  max-width: 10em;
   margin: auto;
   padding: 0.6em;
 }
@@ -46,19 +43,21 @@ form{
     border-bottom-right-radius: 0;
     border-bottom-left-radius: 0;
     text-align: left;
-    width: 20em;
-
 }
 
-.form-signin input[type="submit"] {
 
-    width: 10em;
-
-}
 
 .form-signin input[type="password"] {
     margin-bottom: 30px;
     border-top-left-radius: 0;
     border-top-right-radius: 0;
-    width: 20em;
+
+}
+
+@media only screen and (max-width: 330px) {
+  form.container{
+    max-width: 15em;
+    margin: auto;
+    padding: 0.3em;
+  }
 }
